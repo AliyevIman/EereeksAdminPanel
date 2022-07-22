@@ -25,7 +25,7 @@ export const categoryUpdateAction=(categoryData)=>async(dispatch)=>{
         JSON.stringify(categoryData), config
         )
         dispatch({type:CATEGORY_UPDATE_SUCCESS,payload:data});
-        dispatch({type:CATEGORY_EDIT_SUCCESS,payload:data.data});
+        dispatch({type:CATEGORY_EDIT_SUCCESS,payload:data.categoryData});
 
     } catch (error) {
         dispatch({type:CATEGORY_UPDATE_FAIL,payload:error});
